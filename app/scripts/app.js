@@ -18,7 +18,7 @@ angular
     'ngTouch',
     'ui.bootstrap'
   ])
-  .config(function ($routeProvider, $locationProvider) {
+  .config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -30,6 +30,4 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-
-      $locationProvider.html5Mode(true);
   });
