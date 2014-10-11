@@ -1,7 +1,7 @@
 <p>
-  <button class="btn btn-default btn-sm" ng-click="tab = 0">Creational</button>
-  <button class="btn btn-default btn-sm" ng-click="tab = 1">Structural</button>
-  <button class="btn btn-default btn-sm" ng-click="tab = 2">Behavioral</button>
+  <button class="btn btn-default btn-sm" ng-click="tab = 0" ng-disabled="tab === 0">Creational</button>
+  <button class="btn btn-default btn-sm" ng-click="tab = 1" ng-disabled="tab === 1">Structural</button>
+  <button class="btn btn-default btn-sm" ng-click="tab = 2" ng-disabled="tab === 2">Behavioral</button>
 </p>
 
 <tabset class="category-tabs">
