@@ -23,10 +23,7 @@
     <!-- Add your site or application content here -->
     <div class="container">
       <div class="header">
-        <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-        </ul>
+        <ng-include src="'/views/nav.html'"></ng-include>
         <h3>JAVSCRIPT DESIGN PATTERNS</h3>
       </div>
 
@@ -68,28 +65,10 @@
     <!-- endbower -->
     <!-- endbuild -->
 
-    <script>
-      var menu = document.querySelector('.nav');
-      var anchors = menu.getElementsByTagName('li');
-
-      _.each(anchors, function (anchor) {
-        anchor.addEventListener('click', function () {
-          var hasClass = anchor.getAttribute('class');
-
-          if (hasClass !== 'active') {
-            _.each(anchors, function (anchor) {
-              anchor.removeAttribute('class');
-            });
-
-            anchor.setAttribute('class', 'active');
-          }
-        });
-      });
-    </script>
-
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/controllers/nav.js"></script>
+    <!-- endbuild -->
 </body>
 </html>
