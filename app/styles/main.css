@@ -106,6 +106,10 @@ a, a:hover, a:focus {
     #MODULES
 \*------------------------------------*/
 
+.header {
+  margin-bottom: 30px;
+}
+
 .header h3 {
   font-family: Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
 }
