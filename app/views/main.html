@@ -6,36 +6,14 @@
 
 <tabset class="category-tabs">
   <tab active="tab === 0">
-    <tabset>
-      <tab heading="Singleton Pattern">
-        A design pattern for creating a single instance of a class. Longer description coming soon!
-      </tab>
-      <tab heading="Factory Pattern">
-        Coming soon!
-      </tab>
-    </tabset>
+    <div ng-include="'views/creational/index.html'"></div>
   </tab>
 
   <tab active="tab === 1">
-    <tabset>
-      <tab heading="Decorator Pattern">
-        Coming soon!
-      </tab>
-      <tab heading="Adapter Pattern">
-        Coming soon!
-      </tab>
-    </tabset>
+    <div ng-include="'views/structural/index.html'"></div>
   </tab>
 
   <tab active="tab === 2">
-    <tabset>
-      <tab heading="Observer Pattern">
-        Coming soon!
-      </tab>
-      <tab heading="Visitor Pattern">
-        Coming soon!
-      </tab>
-    </tabset>
+    <div ng-include="'views/behavioral/index.html'"></div>
   </tab>
-
 </tabset>
