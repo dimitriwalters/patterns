@@ -149,3 +149,10 @@ a, a:hover, a:focus {
   .about-text a:hover {
     text-decoration: underline;
   }
+
+
+code {
+  white-space: pre;
+  word-break: normal;
+  word-wrap: normal;
+}

@@ -1,3 +1,44 @@
 <p><strong>Description:</strong> create single instance of a class</p>
 <p><strong>Scenario:</strong> only want one reference to a class</p>
-<p><em>Coding example coming soon</em></p>
+<p>Implementation:</p>
+<code>
+var singleton = (function () {
+  var instance = null;
+
+  function init () {
+    var count = 0;
+
+    return {
+      incr: function () {
+        return ++count;
+      },
+
+      getCount: function () {
+        return count;
+      }
+    };
+  }
+
+  return {
+    getInstance: function () {
+      if (!instance) {
+        instance = init();
+      }
+
+      return instance;
+    }
+  };
+})();
+
+var a = singleton.getInstance();
+a.incr();
+console.log(a.getCount()); // 1
+a.incr();
+console.log(a.getCount()); // 2
+
+var b = singleton.getInstance();
+console.log(b.getCount()); // 2
+b.incr();
+
+console.log(a.getCount()); // 3
+</code>
