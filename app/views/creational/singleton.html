@@ -1,7 +1,7 @@
 <p><strong>Description:</strong> create single instance of a class</p>
 <p><strong>Scenario:</strong> only want one reference to a class</p>
 <p>Implementation:</p>
-<code>
+<pre>
 var singleton = (function () {
   var instance = null;
 
@@ -41,4 +41,4 @@ console.log(b.getCount()); // 2
 b.incr();
 
 console.log(a.getCount()); // 3
-</code>
+</pre>
