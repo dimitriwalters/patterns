@@ -1,11 +1,11 @@
 <p><strong>Description:</strong> create single instance of a class</p>
 <p><strong>Scenario:</strong> only want one reference to a class</p>
-<p>Implementation:</p>
-<pre>
+<p><strong>Demo:</strong> very simple counter class</p>
+<pre class="prettyprint">
 var singleton = (function () {
   var instance = null;
 
-  function init () {
+  function Counter () {
     var count = 0;
 
     return {
@@ -22,7 +22,7 @@ var singleton = (function () {
   return {
     getInstance: function () {
       if (!instance) {
-        instance = init();
+        instance = Counter();
       }
 
       return instance;

@@ -151,8 +151,7 @@ a, a:hover, a:focus {
   }
 
 
-code {
-  white-space: pre;
-  word-break: normal;
-  word-wrap: normal;
+pre.prettyprint {
+  padding: 9.5px;
+  border: 1px solid #ccc;
 }
