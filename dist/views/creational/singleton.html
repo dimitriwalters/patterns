@@ -1,4 +1,6 @@
-<p><strong>Description:</strong> create single instance of a class</p> <p><strong>Scenario:</strong> only want one reference to a class</p> <p><strong>Demo:</strong> very simple counter class</p> <pre class="prettyprint">
+<p><strong>Description:</strong> restrict object creation for a class to one instance</p>
+<p><strong>Demo:</strong> counter class</p>
+  <pre class="prettyprint">
 let CounterSingleton = (() => {
   let instance = null;
   class Counter { // class is private
