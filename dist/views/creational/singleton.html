@@ -1,41 +1,24 @@
 <p><strong>Description:</strong> create single instance of a class</p> <p><strong>Scenario:</strong> only want one reference to a class</p> <p><strong>Demo:</strong> very simple counter class</p> <pre class="prettyprint">
-var singleton = (function () {
-  var instance = null;
-
-  function Counter () {
-    var count = 0;
-
-    return {
-      incr: function () {
-        return ++count;
-      },
-
-      getCount: function () {
-        return count;
-      }
-    };
+let CounterSingleton = (() => {
+  let instance = null;
+  class Counter { // class is private
+    #counter;
+    constructor () { this.#counter = 0; }
+    add () { return ++this.#counter; }
+    count () { return this.#counter; }
   }
-
   return {
-    getInstance: function () {
-      if (!instance) {
-        instance = Counter();
-      }
-
+    get: () => {
+      if (!instance) instance = new Counter();
       return instance;
     }
   };
 })();
 
-var a = singleton.getInstance();
-a.incr();
-console.log(a.getCount()); // 1
-a.incr();
-console.log(a.getCount()); // 2
+let a = CounterSingleton.get(), b = CounterSingleton.get();
+a.add();
+console.log(a.count()); // 1
+b.add();
+console.log(b.count()); // 2
 
-var b = singleton.getInstance();
-console.log(b.getCount()); // 2
-b.incr();
-
-console.log(a.getCount()); // 3
 </pre>
